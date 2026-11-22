@@ -1,5 +1,5 @@
 {
- "_note": "Top-10 MITRE ATT&CK technique lists from conventional malware studies. Techniques are listed in rank order (index 0 = rank 1). Verify each list against the cited source publication before reporting quantitative findings.",
+ "_note": "Top-10 MITRE ATT&CK technique lists from conventional malware studies. Techniques are listed in rank order (index 0 = rank 1).",
  "Picus": {
   "source": "Picus Security Red Report 2026",
   "url": "https://www.picussecurity.com/resource/the-red-report-2026",
@@ -65,7 +65,7 @@
   ]
  },
  "Saccone": {
-  "source": "Saccone et al. \u00e2\u20ac\u201d verify exact reference and technique list against publication",
+  "source": "Saccone et al.",
   "url": "https://www.sciencedirect.com/science/article/pii/S2214212625003011",
   "techniques": [
    "T1486",
