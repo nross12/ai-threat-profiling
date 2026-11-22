@@ -1,0 +1,133 @@
+# aitp: every tunable parameter of the analysis. Paths are relative to this file's directory.
+# Run:  python -m aitp fetch  ->  python -m aitp extract  ->  python -m aitp all
+
+seed: 42                      # every random draw (Mantel test, rarefaction, subsets)
+permutations: 9999            # Mantel test
+rarefaction_draws: 10000      # RQ5: random draws of n_AI conventional samples per actor
+subset_draws: 10000           # RQ6: random technique subsets (and sample draws) per actor for the CSS differential
+
+paths:
+  hashes:
+    ai: data/hashes/ai_assisted.csv
+    APT28: data/hashes/apt28_conventional.csv
+    APT36: data/hashes/apt36_conventional.csv
+  conventional_families: data/labels/conventional_families.csv
+  external_top10s: data/published/external_top10s.json
+  anthropic_tactic_shares: data/published/anthropic_tactic_shares.json
+  anthropic_top25: data/published/anthropic_top25s.json  # Anthropic's top-25 techniques
+  mbc_names: data/published/mbc_objective_behaviours.json
+  attack_manifest: data/published/attack_manifest.csv
+  raw: data/raw                 # fetched VirusTotal reports (vt-general/, vt-behaviour/) and ATT&CK bundles (attack/)
+  derived: data/derived         # tables built by `extract`
+  outputs: outputs
+
+virustotal:
+  api_url: https://www.virustotal.com/api/v3
+  api_key_env: VT_API_KEY       # the key is read from this environment variable
+  requests_per_minute: 4        # public-API quota; raise if you're special and have a premium key
+
+attack:
+  version: "18.1"               # every technique is mapped to this version
+  keep_mobile: true             # Mobile-domain IDs are kept (all-platform analyses only)
+
+# ---------------------------------------------------------------------------------------------
+# Analysis units
+# ---------------------------------------------------------------------------------------------
+min_labelled_per_unit: 1        # a unit enters family-level analyses with >= 1 ATT&CK-labelled sample
+exclude_ai_units: []            # e.g. [AI Theater] to drop AI Theater from every analysis
+largest_ai_unit: HONESTCUE      # the unit dropped in "without" and leave-one-out controls
+
+case_studies:                   # actor -> AI-assisted family attributed to it (order fixes the random draws)
+  APT36: VibeWare
+  APT28: LameHug
+
+# AI role of each family. runtime: the sample calls an LLM when it runs;
+# development: AI wrote or converted the code; illusory: AI Theater; anti_analysis: FRUITSHELL.
+ai_roles:
+  LameHug: runtime
+  PromptSpy: runtime
+  MalTerminal: runtime
+  HONESTCUE: runtime
+  Pandora: runtime
+  QUIETVAULT: runtime
+  AI-Gated Execution: runtime
+  AI-Powered RAT: runtime
+  AI Theater: illusory
+  FRUITSHELL: anti_analysis
+  Evil AI: development
+  VoidLink: development
+  FunkSec: development
+  Koske Malware: development
+  WaterSaci: development
+  Slopoly: development
+  CryptoStealer: development
+  VibeWare: development
+  ATOMIC: delivery_lure
+
+# ---------------------------------------------------------------------------------------------
+# File type -> platform (from the VirusTotal type_tag; descriptive, in samples.csv and the manifest)
+# ---------------------------------------------------------------------------------------------
+type_tag_to_platform:
+  peexe: windows
+  pedll: windows
+  msi: windows
+  lnk: windows
+  bat: windows
+  powershell: windows
+  vba: windows
+  doc: windows_document
+  docx: windows_document
+  xls: windows_document
+  xlsx: windows_document
+  rtf: windows_document
+  outlook: windows_document
+  email: windows_document
+  elf: linux
+  android: android
+  macho: macos
+  python: script_crossplatform
+  pyc: script_crossplatform
+  javascript: script_crossplatform
+  shell: script_crossplatform
+  c: script_crossplatform
+  html: other
+  xml: other
+  text: other
+  ps: other
+  pdf: other
+  zip: archive
+  rar: archive
+  isoimage: archive
+  jpeg: other
+  png: other
+  bmp: other
+
+# ---------------------------------------------------------------------------------------------
+# LLM evidence (sandbox network data and memory strings)
+# ---------------------------------------------------------------------------------------------
+llm_endpoints: [generativelanguage.googleapis.com, aiplatform.googleapis.com, gemini.google.com,
+                api.openai.com, openai.azure.com, chatgpt.com, api.anthropic.com, claude.ai,
+                huggingface.co, hf.co, api-inference.huggingface.co, router.huggingface.co,
+                api.deepseek.com, api.mistral.ai, api.groq.com, openrouter.ai, api.together.xyz,
+                api.perplexity.ai, api.cohere.ai, ollama]
+# Behaviour that only runs after the model has answered (regex over command lines and created
+# processes). LAMEHUG executes the returned commands, which stage data in C:\ProgramData\info;
+# HONESTCUE compiles the returned C# with csc.exe.
+llm_downstream:
+  LameHug: 'programdata.{1,2}info'
+  HONESTCUE: 'csc\.exe'
+# The steps the LLM's answer drives, per family (regex over command lines, created processes and
+# outbound connections written as tcp://<ip>:<port>; private addresses are left out). LAMEHUG asks the
+# model for commands that collect system information and documents into C:\ProgramData\info and then
+# uploads them over SFTP.
+llm_steps:
+  LameHug:
+    discovery: 'systeminfo.{0,60}programdata.{1,2}info'
+    collection: 'xcopy.{0,120}programdata.{1,2}info'
+    exfiltration_sftp: '^tcp://[0-9.]+:22$'
+# Published ATT&CK mappings of AI-assisted families: family -> bundle file and software ID.
+# Only LAMEHUG has an ATT&CK software entry (S9035).
+published_mappings:
+  LameHug: {bundle: enterprise-attack-19.2.json, software: S9035}
+
+dual_use_tools: [certutil, ProcDump, Responder, Winexe, CompuTrace, Koadic]

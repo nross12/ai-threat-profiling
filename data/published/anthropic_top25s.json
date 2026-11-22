@@ -1,0 +1,202 @@
+[
+  {
+    "id": 1,
+    "tactic": "TA0042",
+    "technique": "T1587.001",
+    "description": "Develop Capabilities: Malware",
+    "observations": 577,
+    "prevalence": 4.16
+  },
+  {
+    "id": 2,
+    "tactic": "TA0005",
+    "technique": "T1027",
+    "description": "Obfuscated Files or Information",
+    "observations": 509,
+    "prevalence": 3.67
+  },
+  {
+    "id": 3,
+    "tactic": "TA0009",
+    "technique": "T1005",
+    "description": "Data from Local System",
+    "observations": 477,
+    "prevalence": 3.44
+  },
+  {
+    "id": 4,
+    "tactic": "TA0005",
+    "technique": "T1562.001",
+    "description": "Impair Defenses: Disable or Modify Tools",
+    "observations": 423,
+    "prevalence": 3.05
+  },
+  {
+    "id": 5,
+    "tactic": "TA0005;TA0004",
+    "technique": "T1055",
+    "description": "Process Injection",
+    "observations": 414,
+    "prevalence": 2.98
+  },
+  {
+    "id": 6,
+    "tactic": "TA0011",
+    "technique": "T1071.001",
+    "description": "Application Layer Protocol: Web Protocols",
+    "observations": 360,
+    "prevalence": 2.59
+  },
+  {
+    "id": 7,
+    "tactic": "TA0001",
+    "technique": "T1190",
+    "description": "Exploit Public-Facing Application",
+    "observations": 286,
+    "prevalence": 2.06
+  },
+  {
+    "id": 8,
+    "tactic": "TA0042",
+    "technique": "T1588.002",
+    "description": "Obtain Capabilities: Tool",
+    "observations": 283,
+    "prevalence": 2.04
+  },
+  {
+    "id": 9,
+    "tactic": "TA0007",
+    "technique": "T1083",
+    "description": "File and Directory Discovery",
+    "observations": 280,
+    "prevalence": 2.02
+  },
+  {
+    "id": 10,
+    "tactic": "TA0010",
+    "technique": "T1041",
+    "description": "Exfiltration Over C2 Channel",
+    "observations": 235,
+    "prevalence": 1.69
+  },
+  {
+    "id": 11,
+    "tactic": "TA0042",
+    "technique": "T1583.001",
+    "description": "Acquire Infrastructure: Domains",
+    "observations": 217,
+    "prevalence": 1.56
+  },
+  {
+    "id": 12,
+    "tactic": "TA0005",
+    "technique": "T1036.005",
+    "description": "Masquerading: Match Legitimate Resource Name or Location",
+    "observations": 192,
+    "prevalence": 1.38
+  },
+  {
+    "id": 13,
+    "tactic": "TA0042",
+    "technique": "T1583.006",
+    "description": "Acquire Infrastructure: Web Services",
+    "observations": 191,
+    "prevalence": 1.38
+  },
+  {
+    "id": 14,
+    "tactic": "TA0043",
+    "technique": "T1595.002",
+    "description": "Active Scanning: Vulnerability Scanning",
+    "observations": 183,
+    "prevalence": 1.32
+  },
+  {
+    "id": 15,
+    "tactic": "TA0003;TA0004",
+    "technique": "T1547.001",
+    "description": "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+    "observations": 175,
+    "prevalence": 1.26
+  },
+  {
+    "id": 16,
+    "tactic": "TA0007",
+    "technique": "T1082",
+    "description": "System Information Discovery",
+    "observations": 170,
+    "prevalence": 1.23
+  },
+  {
+    "id": 17,
+    "tactic": "TA0043",
+    "technique": "T1590.005",
+    "description": "Gather Victim Network Information: IP Addresses",
+    "observations": 162,
+    "prevalence": 1.17
+  },
+  {
+    "id": 18,
+    "tactic": "TA0001",
+    "technique": "T1566.002",
+    "description": "Phishing: Spearphishing Link",
+    "observations": 156,
+    "prevalence": 1.12
+  },
+  {
+    "id": 19,
+    "tactic": "TA0001",
+    "technique": "T1566.001",
+    "description": "Phishing: Spearphishing Attachment",
+    "observations": 152,
+    "prevalence": 1.1
+  },
+  {
+    "id": 20,
+    "tactic": "TA0002",
+    "technique": "T1106",
+    "description": "Native API",
+    "observations": 149,
+    "prevalence": 1.07
+  },
+  {
+    "id": 21,
+    "tactic": "TA0007",
+    "technique": "T1057",
+    "description": "Process Discovery",
+    "observations": 147,
+    "prevalence": 1.06
+  },
+  {
+    "id": 22,
+    "tactic": "TA0002",
+    "technique": "T1059.007",
+    "description": "Command and Scripting Interpreter: JavaScript",
+    "observations": 147,
+    "prevalence": 1.06
+  },
+  {
+    "id": 23,
+    "tactic": "TA0043",
+    "technique": "T1592.002",
+    "description": "Gather Victim Host Information: Software",
+    "observations": 135,
+    "prevalence": 0.97
+  },
+  {
+    "id": 24,
+    "tactic": "TA0011",
+    "technique": "T1573.001",
+    "description": "Encrypted Channel: Symmetric Cryptography",
+    "observations": 133,
+    "prevalence": 0.96
+  },
+  {
+    "id": 25,
+    "tactic": "TA0009",
+    "technique": "T1113",
+    "description": "Screen Capture",
+    "observations": 131,
+    "prevalence": 0.94
+  }
+]

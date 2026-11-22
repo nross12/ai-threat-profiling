@@ -1,0 +1,4 @@
+file,url,sha256,x_mitre_version
+enterprise-attack-18.1.json,https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack-18.1.json,f857d8f78f2f0c0b7db321a711a39fba98546c1e3076a657684850c83d0962fb,18.1
+mobile-attack-18.1.json,https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/mobile-attack/mobile-attack-18.1.json,c6dd56996586b2d1484e6555f9f5307f379dff24e7632e6af23097ef25656ea9,18.1
+enterprise-attack-19.2.json,https://raw.githubusercontent.com/mitre-attack/attack-stix-data/master/enterprise-attack/enterprise-attack-19.2.json,dc1639caa5501d720e280cf1cbd8fbe009884a0c9b3e6e9ed9d0c25166c3d8f4,19.2

@@ -1,0 +1,288 @@
+{
+  "OB0001": {
+    "objective": "Anti-behavioural Analysis",
+    "behaviours": {
+      "B0036": "Capture Evasion",
+      "B0025": "Conditional Execution",
+      "B0001": "Debugger Detection",
+      "B0002": "Debugger Evasion",
+      "B0003": "Dynamic Analysis Evasion",
+      "B0004": "Emulator Detection",
+      "B0005": "Emulator Evasion",
+      "B0008": "Executable Code Virtualization",
+      "F0015": "Hijack Execution Flow",
+      "B0006": "Memory Dump Evasion",
+      "B0007": "Sandbox Detection",
+      "F0001": "Software Packing",
+      "B0009": "Virtual Machine Detection"
+    }
+  },
+  "OB0002": {
+    "objective": "Anti-Static Analysis",
+    "behaviours": {
+      "B0010": "Call Graph Generation Evasion",
+      "B0012": "Disassembler Evasion",
+	  "B0045": "Data Flow Analysis Evasion",
+      "B0032": "Executable Code Obfuscation",
+      "B0034": "Executable Code Optimization",
+      "B0008": "Executable Code Virtualization",
+      "F0001": "Software Packing"
+    }
+  },
+  "OB0003": {
+    "objective": "Collection",
+    "behaviours": {
+      "E1560": "Archive Collected Data",
+      "B0028": "Cryptocurrency",
+      "F0015": "Hijack Execution Flow",
+      "E1056": "Input Capture",
+      "F0002": "Keylogging",
+      "E1113": "Screen Capture"
+    }
+  },
+  "OB0004": {
+    "objective": "Command and Control",
+    "behaviours": {
+      "B0030": "Command and Control Communication",
+      "B0031": "Domain Name Generation",
+      "E1105": "Ingress Tool Transfer"
+    }
+  },
+  "OB0005": {
+    "objective": "Credential Access",
+    "behaviours": {
+      "B0028": "Cryptocurrency",
+	  "F0015": "Hijack Execution Flow",
+      "E1056": "Input Capture",
+      "F0002": "Keylogging",
+      "E1113": "Screen Capture"
+    }
+  },
+  "OB0006": {
+    "objective": "Defense Evasion",
+    "behaviours": {
+      "B0027": "Alternative Installation Location",
+      "F0013": "Bootkit",
+      "B0037": "Bypass DEP",
+      "F0009": "Component Firmware",
+      "B0025": "Conditional Execution",
+      "B0040": "Covert Location",
+      "F0004": "Disable or Evade Security Tools",
+	  "E1564": "Hide Artifacts",
+      "F0005": "Hidden Files and Directories",
+      "F0015": "Hijack Execution Flow",
+      "F0006": "Indicator Blocking",
+      "B0047": "Install Insecure or Malicious Configuration",
+      "E1112": "Modify Registry",
+      "E1027": "Obfuscated Files or Information",
+      "B0029": "Polymorphic Code",
+      "E1055": "Process Injection",
+      "E1014": "Rootkit",
+      "F0007": "Self Deletion",
+      "F0001": "Software Packing"
+    }
+  },
+  "OB0007": {
+    "objective": "Discovery",
+    "behaviours": {
+      "B0013": "Analysis Tool Discovery",
+      "E1010": "Application Window Discovery",
+      "B0046": "Code Discovery",
+      "E1083": "File and Directory Discovery",
+	  "B0038": "Self Discovery",
+      "B0014": "SMTP Connection Discovery",
+      "E1082": "System Information Discovery",
+	  "B0043": "Taskbar Discovery"
+    }
+  },
+  "OB0008": {
+    "objective": "Impact",
+    "behaviours": {
+      "E1510": "Clipboard Modification",
+      "F0009": "Component Firmware",
+      "B0016": "Compromise Data Integrity",
+      "E1485": "Data Destruction",
+      "E1486": "Data Encrypted for Impact",
+      "B0033": "Denial of Service",
+      "B0017": "Destroy Hardware",
+      "F0014": "Disk Wipe",
+      "E1190": "Exploit Kit",
+      "E1203": "Exploitation for Client Execution",
+      "E1643": "Generate Traffic from Victim",
+      "B0019": "Manipulate Network Traffic",
+      "B0042": "Modify Hardware",
+      "B0022": "Remote Access",
+      "B0018": "Resource Hijacking",
+      "B0039": "Spamming"
+    }
+  },
+  "OB0009": {
+    "objective": "Execution",
+    "behaviours": {
+      "E1059": "Command and Scripting Interpreter",
+      "B0025": "Conditional Execution",
+      "B0044": "Execution Dependency",
+      "E1203": "Exploitation for Client Execution",
+      "B0023": "Install Additional Program",
+      "B0024": "Prevent Concurrent Execution",
+      "B0011": "Remote Commands",
+      "B0020": "Send Email",
+      "B0021": "Send Poisoned Text Message",
+      "E1569": "System Services",
+      "E1204": "User Execution"
+    }
+  },
+  "OB0010": {
+    "objective": "Exfiltration",
+    "behaviours": {
+      "E1020": "Automated Exfiltration"
+    }
+  },
+  "OB0011": {
+    "objective": "Lateral Movement",
+    "behaviours": {
+      "B0026": "Malicious Network Driver",
+      "E1105": "Ingress Tool Transfer",
+      "B0020": "Send Email",
+      "B0021": "Send Poisoned Text Message",
+      "E1195": "Supply Chain Compromise"
+    }
+  },
+  "OB0012": {
+    "objective": "Persistence",
+    "behaviours": {
+      "F0013": "Bootkit",
+      "F0009": "Component Firmware",
+      "E1564": "Hide Artifacts",
+      "F0005": "Hidden Files and Directories",
+      "F0015": "Hijack Execution Flow",
+      "B0047": "Install Insecure or Malicious Configuration",
+      "F0010": "Kernel Modules and Extensions",
+      "B0026": "Malicious Network Driver",
+      "F0011": "Modify Existing Service",
+      "E1112": "Modify Registry",
+      "F0012": "Registry Run Keys / Startup Folder",
+      "B0022": "Remote Access",
+	  "E1105": "Ingress Tool Transfer",
+      "B0035": "Shutdown Event"
+    }
+  },
+  "OB0013": {
+    "objective": "Privilege Escalation",
+    "behaviours": {
+      "F0015": "Hijack Execution Flow",
+      "F0010": "Kernel Modules and Extensions",
+      "F0011": "Modify Existing Service",
+      "E1055": "Process Injection",
+      "F0016": "Install Certificate"
+    }
+  },
+  "OC0006": {
+    "objective": "Communication",
+    "behaviours": {
+      "C0011": "DNS Communication",
+      "C0004": "FTP Communication",
+      "C0002": "HTTP Communication",
+      "C0014": "ICMP Communication",
+      "C0003": "Interprocess Communication",
+      "C0012": "SMTP Communication",
+      "C0001": "Socket Communication",
+      "C0005": "WinINet Communication"
+    }
+  },
+  "OC0005": {
+    "objective": "Cryptography",
+    "behaviours": {
+      "C0068": "Crypto Algorithm",
+      "C0069": "Crypto Constant",
+      "C0059": "Crypto Library",
+      "C0027": "Encrypt Data",
+      "C0031": "Decrypt Data",
+      "C0021": "Generate Pseudo-random Sequence",
+      "C0029": "Cryptography Hash",
+      "C0028": "Encryption Key",
+      "C0061": "Hashed Message Authentication Code"
+    }
+  },
+  "OC0004": {
+    "objective": "Data",
+    "behaviours": {
+      "C0019": "Check String",
+      "C0032": "Checksum",
+      "C0024": "Compress Data",
+      "C0060": "Compression Library",
+      "C0025": "Decompress Data",
+      "C0026": "Encode Data",
+      "C0053": "Decode Data",
+      "C0058": "Modulo",
+      "C0030": "Non-Cryptographic Hash",
+      "C0020": "Use Constant"
+    }
+  },
+  "OC0001": {
+    "objective": "File System",
+    "behaviours": {
+      "C0015": "Alter File Extension",
+      "C0045": "Copy File",
+      "C0046": "Create Directory",
+      "C0016": "Create File",
+      "C0048": "Delete Directory",
+      "C0047": "Delete File",
+      "C0049": "Get File Attributes",
+      "C0063": "Move File",
+      "C0051": "Read File",
+      "C0056": "Read Virtual Disk",
+      "C0050": "Set File Attributes",
+      "C0052": "Writes File"
+    }
+  },
+  "OC0007": {
+    "objective": "Hardware",
+    "behaviours": {
+      "C0037": "Install Driver",
+      "C0023": "Load Driver",
+      "C0057": "Simulate Hardware"
+    }
+  },
+  "OC0002": {
+    "objective": "Memory",
+    "behaviours": {
+      "C0007": "Allocate Memory",
+      "C0008": "Change Memory Protection",
+      "C0044": "Free Memory",
+      "C0006": "Heap Spray",
+      "C0010": "Overflow Buffer",
+      "C0009": "Stack Pivot"
+    }
+  },
+  "OC0008": {
+    "objective": "Operating System",
+    "behaviours": {
+      "C0033": "Console",
+      "C0034": "Environment Variable",
+      "C0036": "Registry",
+      "C0035": "Wallpaper"
+    }
+  },
+  "OC0003": {
+    "objective": "Process",
+    "behaviours": {
+      "C0040": "Allocate Thread Local Storage",
+      "C0042": "Create Mutex",
+      "C0043": "Check Mutex",
+      "C0017": "Create Process",
+      "C0038": "Create Thread",
+      "C0064": "Enumerate Threads",
+      "C0065": "Open Process",
+      "C0066": "Open Thread",
+      "C0054": "Resume Thread",
+      "C0072": "Set Thread Context",
+      "C0041": "Set Thread Local Storage Value",
+      "C0055": "Suspend Thread",
+      "C0018": "Terminate Process",
+      "C0039": "Terminate Thread",
+      "C0070": "Unmap Section View",
+      "C0071": "Write Process Memory"
+    }
+  }
+}

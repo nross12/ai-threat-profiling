@@ -1,0 +1,19 @@
+{
+ "_source": "Anthropic, LLM ATT&CK Navigator; tactic share of all TTP observations, %",
+ "shares": {
+  "TA0005": 16.17,
+  "TA0042": 13.27,
+  "TA0009": 9.45,
+  "TA0011": 8.86,
+  "TA0002": 8.7,
+  "TA0043": 7.84,
+  "TA0001": 7.42,
+  "TA0007": 7.27,
+  "TA0003": 6.38,
+  "TA0006": 6.03,
+  "TA0040": 2.78,
+  "TA0010": 2.78,
+  "TA0004": 2.36,
+  "TA0008": 0.7
+ }
+}
